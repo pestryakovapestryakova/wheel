@@ -1,6 +1,5 @@
 FROM --platform=linux/amd64 alpine:3.19
 RUN apk add --no-cache squid wget curl bash
-
 RUN echo 'http_port 3128' > /etc/squid/squid.conf && \
     echo 'acl allsrc src all' >> /etc/squid/squid.conf && \
     echo 'http_access allow allsrc' >> /etc/squid/squid.conf && \
